@@ -24,10 +24,6 @@ export default component$((props: IDataTableProps) => {
                     </tr>
 
                 ))}
-                <tr>
-
-                </tr>
-
             </table>
         </div>
     );
