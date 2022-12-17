@@ -4,6 +4,7 @@ export interface IHeader {
     editable?: boolean
 }
 export interface IData {
+    index?: string
     firstName: string;
     lastName: string;
     age: string | number;

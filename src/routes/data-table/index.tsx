@@ -24,7 +24,7 @@ export default component$(() => {
     ]
 
     for (const i in range(200, 1)) {
-        data.push({ firstName: 'Sutin', lastName: 'Injitt', age: '30', sex: 'Male', tall: '165' })
+        data.push({ index: i, firstName: 'Sutin', lastName: 'Injitt', age: '30', sex: 'Male', tall: '165' })
     }
     const addData = $(() => store.data = data as never[])
 
