@@ -2,7 +2,7 @@ import { $, component$, useStore } from "@builder.io/qwik";
 import { DocumentHead } from "@builder.io/qwik-city";
 import { Button } from "~/components/Buttons/Button";
 import DataTable from "~/components/data-tables/DataTable";
-import { IData, IHeader } from '../../interfaces/data-tables.interface';
+import { IData, IHeader } from '~/interfaces/data-tables.interface';
 
 export default component$(() => {
 

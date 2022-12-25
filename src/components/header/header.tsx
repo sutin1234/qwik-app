@@ -43,6 +43,9 @@ export default component$(() => {
         <li>
           <a href="/data-table">Data Tables</a>
         </li>
+        <li>
+          <a href="/web-worker">WebWorker</a>
+        </li>
       </ul>
     </header>
   );
