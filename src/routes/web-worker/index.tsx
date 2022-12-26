@@ -1,6 +1,6 @@
 import { $, component$, useStore } from '@builder.io/qwik';
 import { DocumentHead } from '@builder.io/qwik-city';
-import { Button } from '~/components/Buttons';
+import { ButtonSlot } from '../../components/Buttons/ButtonSlot';
 
 export default component$(() => {
     const store = useStore({ dataList: [], loading: false });
@@ -9,7 +9,7 @@ export default component$(() => {
         store.loading = true
 
         if (window.Worker) {
-            const workerScriptURL =  new URL('./components/workers/web-worker.js', import.meta.url)
+            const workerScriptURL = new URL('./components/workers/web-worker.js', import.meta.url)
             const worker = new Worker(workerScriptURL)
             worker.postMessage(store.dataList)
 
@@ -30,7 +30,9 @@ export default component$(() => {
                     dataList: {JSON.stringify(store.dataList)}
                 </div>
             }
-            <Button label="generate data list with web worker" onClick$={increase} />
+            <ButtonSlot onClick$={increase}>
+                Dump Table with Web Worker
+            </ButtonSlot>
         </div>
     );
 });
