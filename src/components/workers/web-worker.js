@@ -2,10 +2,10 @@ const range = (size = 100, startAt = 0) => {
   return [...Array(size).keys()].map((i) => i + startAt);
 };
 
-self.onmessage = (evt) => {
-  let datas = [];
-  for (const i in range(200000, 1)) {
-    datas.push({
+self.onmessage = () => {
+  let data = [];
+  for (const i in range(200, 1)) {
+    data.push({
       index: i,
       firstName: "Sutin",
       lastName: "Injitt",
@@ -15,5 +15,5 @@ self.onmessage = (evt) => {
     });
     console.log("web worker push " + Number(i + 1));
   }
-  self.postMessage(datas);
+  self.postMessage(data);
 };

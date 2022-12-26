@@ -7,11 +7,13 @@ export default component$(() => {
 
     const increase = $(() => {
         store.loading = true
-        if (window.Worker) {
-            const myWorker = new Worker('web-worker.js')
-            myWorker.postMessage(store.dataList)
 
-            myWorker.onmessage = (evt: MessageEvent<any>) => {
+        if (window.Worker) {
+            const workerScriptURL =  new URL('./components/workers/web-worker.js', import.meta.url)
+            const worker = new Worker(workerScriptURL)
+            worker.postMessage(store.dataList)
+
+            worker.onmessage = (evt: MessageEvent<any>) => {
                 store.loading = false
                 store.dataList = evt.data
             }
