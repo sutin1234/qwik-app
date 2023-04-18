@@ -1,4 +1,5 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
+
 import { QwikLogo } from "../icons/qwik";
 import styles from "./header.css?inline";
 
@@ -45,6 +46,9 @@ export default component$(() => {
         </li>
         <li>
           <a href="/web-worker">WebWorker</a>
+        </li>
+        <li>
+          <a href="/load-data">LoadData</a>
         </li>
       </ul>
     </header>

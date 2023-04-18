@@ -1,6 +1,6 @@
-import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { Link } from "@builder.io/qwik-city";
+import { component$ } from "@builder.io/qwik";
 
 export default component$(() => {
   return (
@@ -23,7 +23,7 @@ export default component$(() => {
 
       <h2>Commands</h2>
 
-      <table class="commands">
+      {/* <table class="commands">
         <tr>
           <td>
             <code>npm run dev</code>
@@ -48,11 +48,11 @@ export default component$(() => {
           </td>
           <td>Select an integration to add.</td>
         </tr>
-      </table>
+      </table> */}
 
       <h2>Add Integrations</h2>
 
-      <table class="commands">
+      {/* <table class="commands">
         <tr>
           <td>
             <code>npm run qwik add cloudflare-pages</code>
@@ -96,7 +96,7 @@ export default component$(() => {
             </a>
           </td>
         </tr>
-      </table>
+      </table> */}
 
       <h2>Community</h2>
 
